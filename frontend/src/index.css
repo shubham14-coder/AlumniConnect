@@ -1,0 +1,57 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  background-color: black;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .active {
+    display: inline-block;
+    position: relative; /* Positioning for the pseudo-element */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  .active::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align it to the left */
+    bottom: 0; /* Position it at the bottom */
+    height: 2px; /* Height of the underline */
+  width: 50%;
+    background-color: white; /* Underline color */
+    transform: scaleX(0); /* Initially scale down to 0 */
+    transition: transform 700ms ease; /* Smooth transition for the scale */
+    transform-origin: left;
+  }
+  
+  .active:hover::after {
+    transform: scaleX(1); /* Scale it to full width on hover */
+  }
+  .button-3d {
+   
+  
+    border: none; /* Remove border */
+ 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    /* 3D shadow effect */
+    box-shadow: 0px 0px 6px 3px rgba(255,255,255,0.42); /* Secondary shadow */
+    
+    /* Perspective effect to enhance 3D */
+    transform: perspective(1000px) translateZ(0);
+}
+.mandatory {
+  color: red;
+}
+.set-bg{
+  background-image: url(./assets/singUpbg.png);
+  background-size: cover;
+background-position: center;}
+
+
+
+ 
